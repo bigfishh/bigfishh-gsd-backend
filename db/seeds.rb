@@ -18,3 +18,19 @@ puts "creating todo list"
 annietodo = TodoList.create(user: annie, todo_date: "2020/10/20")
 alextodo = TodoList.create(user: alex, todo_date: "2020/09/10")
 puts "done todo list"
+
+
+
+family = Category.create(name: "Family Event")
+social = Category.create(name: "Social Event")
+work = Category.create(name: "Work-Related Event")
+alone = Category.create(name: "Self-love")
+
+
+eatfood = Item.create(todo_list: annietodo, category: social, name: "hangout", description: "Lunch with Jessie", completed: true)
+
+planvacay = Item.create(todo_list: alextodo, category: family, name: "plan family trip", description: "Research places to visit in Paris", completed: false)
+
+
+followalex = Follow.create(follower_id: annie, following_id: alex)
+followannie = Follow.create(follower_id: alex, following_id: annie)
