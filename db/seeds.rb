@@ -9,6 +9,9 @@
 
 User.destroy_all
 TodoList.destroy_all
+Category.destroy_all
+Item.destroy_all
+Follow.destroy_all
 
 puts "creating user"
 annie = User.create(username: "Annie", name: "AZ", password: '123Password', bio: "biobiobiobio", img_url: "url")
@@ -32,5 +35,5 @@ eatfood = Item.create(todo_list: annietodo, category: social, name: "hangout", d
 planvacay = Item.create(todo_list: alextodo, category: family, name: "plan family trip", description: "Research places to visit in Paris", completed: false)
 
 
-followalex = Follow.create(follower_id: annie, following_id: alex)
-followannie = Follow.create(follower_id: alex, following_id: annie)
+# followalex = Follow.create(follower_id: annie, following_id: alex)
+# followannie = Follow.create(follower_id: alex, following_id: annie)
