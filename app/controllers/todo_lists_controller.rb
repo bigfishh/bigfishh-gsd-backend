@@ -10,4 +10,13 @@ class TodoListsController < ApplicationController
     render json: {todo_list: TodoListSerializer.new(@todo_list)}
   end
 
+  def create
+    @todo_list = TodoList.create(todo_list_params)
+  end
+
+  private
+  def todo_list_params
+    params.permit(:todo_date, :user)
+  end
+
 end
