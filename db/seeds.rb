@@ -14,11 +14,13 @@ Item.destroy_all
 Follow.destroy_all
 
 puts "creating user"
-annie = User.create(username: "Annie", name: "AZ", password: '123Password', bio: "biobiobiobio", img_url: "url")
-alex = User.create(username: "Alex", name: "AS", password: "123Password", bio: "sumsumsumthing", img_url: "url")
+annie = User.create(username: "Annie", name: "AZ", password: 'a', bio: "biobiobiobio", img_url: "url")
+alex = User.create(username: "Alex", name: "AS", password: "a", bio: "sumsumsumthing", img_url: "url")
 puts "done user"
 puts "creating todo list"
 annietodo = TodoList.create(user: annie, todo_date: "2020/10/20")
+annietodo2 = TodoList.create(user: annie, todo_date: "2020/11/20")
+
 alextodo = TodoList.create(user: alex, todo_date: "2020/09/10")
 puts "done todo list"
 
@@ -30,7 +32,11 @@ work = Category.create(name: "Work-Related Event")
 alone = Category.create(name: "Self-love")
 
 
+eatfood2 = Item.create(todo_list: annietodo2, category: social, name: "hangout", description: "Lunch with Patty", completed: true)
+
 eatfood = Item.create(todo_list: annietodo, category: social, name: "hangout", description: "Lunch with Jessie", completed: true)
+
+finproj = Item.create(todo_list: annietodo, category: work, name: "finish the project", description: "mod-4 proj", completed: false)
 
 planvacay = Item.create(todo_list: alextodo, category: family, name: "plan family trip", description: "Research places to visit in Paris", completed: false)
 
