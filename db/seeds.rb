@@ -14,8 +14,8 @@ Item.destroy_all
 Follow.destroy_all
 
 puts "creating user"
-annie = User.create(username: "Annie", name: "AZ", password: 'a', bio: "biobiobiobio", img_url: "url")
-alex = User.create(username: "Alex", name: "AS", password: "a", bio: "sumsumsumthing", img_url: "url")
+annie = User.create(username: "Annie", name: "AZ", password: 'a', bio: "biobiobiobio", img_url: "https://avatars2.githubusercontent.com/u/24644341?s=460&v=4")
+alex = User.create(username: "Alex", name: "AS", password: "a", bio: "sumsumsumthing", img_url: "https://avatars2.githubusercontent.com/u/43193919?s=460&v=4")
 puts "done user"
 puts "creating todo list"
 annietodo = TodoList.create(user: annie, todo_date: "2020/10/20")
