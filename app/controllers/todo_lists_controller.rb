@@ -1,7 +1,8 @@
 class TodoListsController < ApplicationController
 
   def index
-    @todo_lists = TodoList.all  
+    @todo_lists = TodoList.all
+    # @todoObj = TodoList.all
     render json: @todo_lists
   end
 
